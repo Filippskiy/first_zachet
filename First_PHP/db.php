@@ -8,7 +8,7 @@ $books = array(
             "surname" => "Юваль Ной",
         ),
         "genre" => "Естественные науки",
-        "year" => 2011,
+        "year" => 1984,
         "price"=> 472,
         "count" =>2,
     ),

@@ -7,7 +7,7 @@ if (isset($_POST['go'])) {
             header("Location: admin_panel.php?login=$login");
             ob_end_flush(); // Конец буфферизации
         } else
-            echo "Приветствуем Вас, $login!";
+            echo "<h4 id='login_span'>Приветствуем Вас, $login!</h4>";
     } else {
         echo "Вы не зарегистрированы!";
     }
@@ -20,7 +20,6 @@ if (isset($_POST['go'])) {
     <input type="text" placeholder="Ваш логин" name="login" required>
     <label for="email"><b>Пароль</b></label>
     <input type="password" placeholder="Ваш пароль" name="pass" required>
-    <p id='massage'></p>
     <button type="submit" name='go' class="btn">Войти</button>
   </form>
 </div>

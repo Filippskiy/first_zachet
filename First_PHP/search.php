@@ -16,14 +16,20 @@ echo '   <div class="page-heading products-heading header-text">
     </div>
 </div>
 ';
-$out = out_all();
-  if(count($out)>0){
-      foreach($out as $row){
-        echo $row;
+echo '<div class="latest-products">
+<div class="container">
+  <div class="row">';
+if (isset($_POST['gosearch'])) {
+  $data = test_input($_POST['search']);
+  $out = out_search($data);
+  //print_r($out);
+  if (count($out) > 0) {
+      foreach ($out as $row) {
+          echo $row;
       }
-  }
-  if(isset($_POST['gosort'])){
-    sorting($_POST['sort']);
+  } else
+      echo "Ничего не найдено..."; 
 }
+echo '</div></div></div>';
 include "footer.php";
 ?>
