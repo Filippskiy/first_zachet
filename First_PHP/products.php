@@ -16,14 +16,15 @@ echo '   <div class="page-heading products-heading header-text">
     </div>
 </div>
 ';
+  if(isset($_POST['gosort'])){
+    sorting($_POST['sort']);
+}
 $out = out_all();
   if(count($out)>0){
       foreach($out as $row){
         echo $row;
       }
   }
-  if(isset($_POST['gosort'])){
-    sorting($_POST['sort']);
-}
+
 include "footer.php";
 ?>
